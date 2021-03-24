@@ -19,15 +19,15 @@ function New-ServiceNowIncident{
         $IncidentParams = @{Caller = "UserName"
             ShortDescription = "New PS Incident"
             Description = "This incident was created from Powershell"
-            AssignmentGroup "ServiceDesk"
-            Comment "Inline Comment"
-            Category "Office"
-            Subcategory "Outlook"
-            ConfigurationItem UserPC1
+            AssignmentGroup = "ServiceDesk"
+            Comment = "Inline Comment"
+            Category = "Office"
+            Subcategory = "Outlook"
+            ConfigurationItem = UserPC1
             CustomFields = @{u_custom1 = "Custom Field Entry"
                             u_another_custom = "Related Test"}
             }
-        New-ServiceNowIncident @Params
+        New-ServiceNowIncident @IncidentParams
 
  #>
 
